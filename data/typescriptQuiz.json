@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is the correct way to specify a tuple type in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "let tuple: [string, number];",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "let tuple: (string, number);",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "let tuple: [string, number?];",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "let tuple: (string | number);",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "How do you declare a function that can accept any number of arguments of different types in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "function foo(...args: [string, number]) {}",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "function foo(...args: any[]) {}",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "function foo(args: [string, number][]) {}",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "function foo(args: any) {}",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which keyword is used to define a generic type in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "type",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "interface",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "generic",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "T",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What does the `never` type represent in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "A type that can have any value.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "A type that can never be assigned to any value.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "A type for values that will never occur, such as functions that throw errors or never return.",
+        "isCorrect": true
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "A type for any function that returns a value.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is the correct way to define an intersection type in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "let obj: type1 & type2;",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "let obj: type1 | type2;",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "let obj: type1 = type2;",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "let obj: type1 + type2;",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which of the following statements about `interface` and `type` in TypeScript is correct?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "`interface` can be used for creating types of functions and objects, but `type` cannot.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "`type` and `interface` are completely interchangeable, with no differences.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "`interface` is extendable, but `type` is not.",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "`type` can represent unions and intersections, while `interface` cannot.",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Which of the following is true about the `as` keyword in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "It is used for type casting, allowing you to assert the type of a value.",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "It is used for creating a new instance of a class.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "It is used to define a constant variable in a class.",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "It is used to define the return type of a function.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Which TypeScript feature prevents the modification of properties in an object once it's created?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "readonly",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "private",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "static",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "const",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What will happen if you try to assign a value of a different type to a variable that was declared with `const` in TypeScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "The variable will be re-assigned without any error.",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "You will get a compile-time error because `const` variables cannot be reassigned.",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "The code will run but result in unexpected behavior.",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "The value will be converted to match the declared type.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Which TypeScript feature allows you to define a method that returns different types based on the input type?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "Function overloading",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "Union types",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "Generics",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "Type guards",
+        "isCorrect": false
+      }
+    ]
+  }
+]

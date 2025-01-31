@@ -1,0 +1,303 @@
+[
+  {
+    "id" : 1,
+    "question": "Which of the following is NOT a valid JavaScript data type?",
+    "options": [
+      {
+        "id": 1,
+        "label" : "A",
+        "text" : "string",
+        "isCorrect" : false
+      },
+      {
+        "id": 2,
+        "label" : "B",
+        "text" : "boolean",
+        "isCorrect" : false
+      },
+      {
+        "id": 3,
+        "label" : "C",
+        "text" : "number",
+        "isCorrect" : false
+      },
+      {
+        "id": 4,
+        "label" : "A",
+        "text" : "character",
+        "isCorrect" : true
+      }
+    ]
+  },
+  {
+    "id" : 2,
+    "question": "What is the output of the following code?\n\nconsole.log(2 + '2');",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" : "'22'",
+        "isCorrect": true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" : "4",
+        "isCorrect": false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text" : "'4'",
+        "isCorrect": false
+      },
+      {
+        "id" : 4,
+        "label" : "D",
+        "text" : "'2 + 2'",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id" : 3,
+    "question": "Which method is used to add an element to the end of an array in JavaScript?",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" : "push()",
+        "isCorrect" : true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" :  "pop()",
+        "isCorrect" : false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text" :  "shift()",
+        "isCorrect" : false
+      },
+      {
+        "id" : 4,
+        "label" : "D",
+        "text" : "unshift()",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id" : 4,
+    "question": "What is the result of the following code?\n\nconsole.log(typeof null);",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" :"object",
+        "isCorrect" : true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" : "null",
+        "isCorrect" : false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text" : "undefined",
+        "isCorrect" : false
+      },
+      {
+        "id" : 4,
+        "label" : "D",
+        "text" : "boolean",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id" : 5,
+    "question": "Which statement is used to stop a loop in JavaScript?",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text": "continue",
+        "isCorrect" : false
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text": "stop",
+        "isCorrect" : false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text": "break",
+        "isCorrect" : true
+      },
+      
+      {
+        "id" : 4,
+        "label" : "D",
+        "text":  "exit",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id" : 6,
+    "question": "What does the `typeof` operator return for an array in JavaScript?",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" : "object",
+        "isCorrect" : true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" : "array",
+        "isCorrect" : false 
+      },
+      {
+        "id" : 1,
+        "label" : "C",
+        "text" :   "Array",
+        "isCorrect" : false
+      },
+      {
+        "id" : 1,
+        "label" : "D",
+        "text" : "undefined",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id" : 7,
+    "question": "Which of the following is a JavaScript object method used to parse a string as a JSON object?",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" : "JSON.parse()",
+        "isCorrect" : true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" : "JSON.stringify()",
+        "isCorrect" : false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text" : "JSON.create()",
+        "isCorrect" : false
+      },
+      {
+        "id" : 4,
+        "label" : "D",
+        "text" : "JSON.decode()",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id" : 8,
+    "question": "What will be the result of the following code?\n\nconsole.log(0 == false);",
+    "options": [
+      {
+        "id" : 1,
+        "label" : "A",
+        "text" : "true",
+        "isCorrect" : true
+      },
+      {
+        "id" : 2,
+        "label" : "B",
+        "text" : "false",
+        "isCorrect" : false
+      },
+      {
+        "id" : 3,
+        "label" : "C",
+        "text" : "undefined",
+        "isCorrect" : false
+      },
+      {
+        "id" : 4,
+        "label" : "D",
+        "text" : "NaN",
+        "isCorrect" : false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "What does the `===` operator do in JavaScript?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "Compares both value and type",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "Compares only the value",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "Assigns a value to a variable",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "Converts a value to a boolean",
+        "isCorrect": false
+      }
+    ]
+  },  
+  {
+    "id": 10,
+    "question": "What will be the result of the following code?\n\nconsole.log([] == ![]);",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "true",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "false",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "undefined",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "TypeError",
+        "isCorrect": false
+      }
+    ]
+  }  
+]

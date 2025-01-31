@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "What is the correct syntax to declare a function in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "def function_name():",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "function function_name() { }",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "function_name => function()",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "def: function_name()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is the correct way to declare a list in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "list = [1, 2, 3]",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "list = (1, 2, 3)",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "list = {1, 2, 3}",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "list = 1, 2, 3",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which of the following is used to create a class in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "class MyClass:",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "MyClass class:",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "class: MyClass",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "class = MyClass()",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What will be the output of the following Python code?\n\n`print(2 ** 3)`",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "8",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "error",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "How can you access the value of a dictionary in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "dict.key",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "dict['key']",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "dict.key()",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "dict.get(key)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which of the following is used to import a module in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "import module_name",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "include module_name",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "require module_name",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "import_from module_name",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What is the purpose of the `__init__()` method in a Python class?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "To initialize the class variables when an object is created.",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "To define the main functionality of the class.",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "To import external modules.",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "To destroy the object when it's no longer needed.",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What is the default return type of a function in Python if no return statement is specified?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "None",
+        "isCorrect": true
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "void",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "undefined",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "null",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "question": "How do you comment multiple lines in Python?",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "# comment1 \n # comment2",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "/* comment1 \n comment2 */",
+        "isCorrect": false
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "''' comment1 \n comment2 '''",
+        "isCorrect": true
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "// comment1 \n comment2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "question": "What is the output of the following code?\n\n`print(10 // 3)`",
+    "options": [
+      {
+        "id": 1,
+        "label": "A",
+        "text": "3.333",
+        "isCorrect": false
+      },
+      {
+        "id": 2,
+        "label": "B",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "id": 3,
+        "label": "C",
+        "text": "None",
+        "isCorrect": false
+      },
+      {
+        "id": 4,
+        "label": "D",
+        "text": "error",
+        "isCorrect": false
+      }
+    ]
+  }
+]
