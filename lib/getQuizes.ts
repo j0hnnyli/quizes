@@ -13,21 +13,24 @@ type Questions = {
   }[]
 }
 
-const getAllQuizes = (): {id: number, name: string, questions: Questions[] }[]  => {
+const getAllQuizes = (): {id: number, name: string, img: string, questions: Questions[] }[]  => {
   return [
     {
       id: 1,
       name: 'Javascript',
+      img: '/javascriptbg.png',
       questions: javascriptQuiz
     },
     {
       id: 2,
       name: 'Typescript',
+      img: '/typescriptbg.png',
       questions: typescriptQuiz
     },
     {
       id: 3,
       name : 'Python',
+      img: '/pythonbg.png',
       questions: pythonQuiz
     }
   ]
