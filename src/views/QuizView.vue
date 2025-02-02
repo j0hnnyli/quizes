@@ -24,7 +24,7 @@
     currentQuestionIndex.value++
     currentQuestion.value = quiz.questions[currentQuestionIndex.value];
     selectedOption.value = null;
-  
+  }
   const progress = computed(() => `${currentQuestionIndex.value/quiz.questions.length * 100}%`) 
 </script> 
 
