@@ -26,7 +26,7 @@
     if(quiz.questions.length - 1 === currentQuestionIndex.value){
       showResults.value = true;
     }
-
+    
     currentQuestionIndex.value++
     currentQuestion.value = quiz.questions[currentQuestionIndex.value];
     selectedOption.value = null;
