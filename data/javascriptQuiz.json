@@ -167,13 +167,13 @@
         "isCorrect" : false 
       },
       {
-        "id" : 1,
+        "id" : 3,
         "label" : "C",
         "text" :   "Array",
         "isCorrect" : false
       },
       {
-        "id" : 1,
+        "id" : 4,
         "label" : "D",
         "text" : "undefined",
         "isCorrect" : false

@@ -3,14 +3,16 @@
   import { useRoute } from 'vue-router';
   import type { Option } from '../../lib/types/questionType';
   import getAllQuizes from '../../lib/getQuizes'; 
+  import Results from '../components/Results.vue';
   
   const route = useRoute();
   const quiz = getAllQuizes().find(quiz => quiz.id === Number(route.params.id))!
 
   const currentQuestionIndex = ref<number>(0);
-  const totalQuestionsRight = ref<number>(0);
-  const currentQuestion = ref(quiz.questions[currentQuestionIndex.value])
+  const currentQuestion = ref(quiz.questions[currentQuestionIndex.value]);
   const selectedOption = ref<Option | null>(null);
+  const totalQuestionsRight = ref<number>(0);
+  const showResults = ref<boolean>(false);
   
   const handleSelectedOption = (option: Option) => {
     selectedOption.value = option;
@@ -19,6 +21,10 @@
   const handleNextQuestion = () => {
     if(selectedOption.value?.isCorrect){
       totalQuestionsRight.value++
+    }
+    
+    if(quiz.questions.length - 1 === currentQuestionIndex.value){
+      showResults.value = true;
     }
 
     currentQuestionIndex.value++
@@ -43,24 +49,31 @@
       </div>
     </div>
 
-    <div class="mt-5">
-      <h2 class="text-2xl opacity-70">{{ currentQuestion.question }}</h2>
-      
-      <ul class="mt-5">
-        <li 
-          v-for="(option, index) in currentQuestion.options" 
-          :key="option.id"
-          :class="{
-            'flex items-center w-full border border-amber-200 my mb-3 rounded-2xl overflow-hidden cursor-pointer hover:shadow-md hover:shadow-amber-200' : true,
-            'shadow-md shadow-amber-200' : selectedOption && selectedOption.id === option.id
-          }" 
-          @click="handleSelectedOption(option)" 
-          :data-index="index"
-        >
-          <span class="p-4 bg-amber-200">{{ option.label }}</span>
-          <span class="p-4 bg-gray-200 w-full">{{ option.text }}</span>
-        </li>
-      </ul>
+    <div>
+      <div v-if="!showResults" class="mt-5">
+        <h2 class="text-2xl opacity-70">{{ currentQuestion.question }}</h2>
+        
+        <ul class="mt-5">
+          <li 
+            v-for="(option, index) in currentQuestion.options" 
+            :key="option.id"
+            :class="{
+              'flex items-center w-full border border-amber-200 my mb-3 rounded-2xl overflow-hidden cursor-pointer hover:shadow-md hover:shadow-amber-200' : true,
+              'shadow-md shadow-amber-200' : selectedOption && selectedOption.id === option.id
+            }" 
+            @click="handleSelectedOption(option)" 
+            :data-index="index"
+          >
+            <span class="p-4 bg-amber-200">{{ option.label }}</span>
+            <span class="p-4 bg-gray-200 w-full">{{ option.text }}</span>
+          </li>
+        </ul>
+      </div>
+      <Results
+        v-else
+        :questionsCorrect="totalQuestionsRight"
+        :totalQuestion="quiz.questions.length"
+      />
     </div>
 
     <Transition name="button">
