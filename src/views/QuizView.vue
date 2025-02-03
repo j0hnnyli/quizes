@@ -4,6 +4,7 @@
   import type { Option } from '../../lib/types/questionType';
   import getAllQuizes from '../../lib/getQuizes'; 
   import Results from '../components/Results.vue';
+
   
   const route = useRoute();
   const quiz = getAllQuizes().find(quiz => quiz.id === Number(route.params.id))!
@@ -22,16 +23,18 @@
     if(selectedOption.value?.isCorrect){
       totalQuestionsRight.value++
     }
+
     
     if(quiz.questions.length - 1 === currentQuestionIndex.value){
       showResults.value = true;
     }
 
+
     currentQuestionIndex.value++
     currentQuestion.value = quiz.questions[currentQuestionIndex.value];
     selectedOption.value = null;
   }
-  
+
   const progress = computed(() => `${currentQuestionIndex.value/quiz.questions.length * 100}%`) 
 </script> 
 
