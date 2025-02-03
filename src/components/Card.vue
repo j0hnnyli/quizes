@@ -1,8 +1,14 @@
 <script setup lang="ts">
-// import { defineProps } from "vue";
+import { defineProps } from "vue";
 import { RouterLink } from "vue-router";
 
-const { title, id, img } = defineProps(["img", "id", "title"]);
+type Props = {
+  title: string,
+  id: number,
+  img: string
+}
+
+const { title, id, img } = defineProps<Props>();
 </script>
 
 <template>
