@@ -4,7 +4,6 @@
   import type { Option } from '../../lib/types/questionType';
   import getAllQuizes from '../../lib/getQuizes'; 
   import Results from '../components/Results.vue';
-
   
   const route = useRoute();
   const quiz = getAllQuizes().find(quiz => quiz.id === Number(route.params.id))!
@@ -23,25 +22,23 @@
     if(selectedOption.value?.isCorrect){
       totalQuestionsRight.value++
     }
-
     
     if(quiz.questions.length - 1 === currentQuestionIndex.value){
       showResults.value = true;
     }
-
-
+    
     currentQuestionIndex.value++
     currentQuestion.value = quiz.questions[currentQuestionIndex.value];
     selectedOption.value = null;
   }
-
+  
   const progress = computed(() => `${currentQuestionIndex.value/quiz.questions.length * 100}%`) 
 </script> 
 
 
 <template>
   <div>
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-center">
       <h2 class="text-5xl font-bold">{{ quiz.name }}</h2>
       
       <div>
@@ -54,20 +51,20 @@
 
     <div>
       <div v-if="!showResults" class="mt-5">
-        <h2 class="text-2xl opacity-70">{{ currentQuestion.question }}</h2>
+        <h2 class="text-xl md:text-2xl opacity-70">{{ currentQuestion.question }}</h2>
         
         <ul class="mt-5">
           <li 
             v-for="(option, index) in currentQuestion.options" 
             :key="option.id"
             :class="{
-              'flex items-center w-full border border-amber-200 my mb-3 rounded-2xl overflow-hidden cursor-pointer hover:shadow-md hover:shadow-amber-200' : true,
+              'flex items-center w-full border border-amber-200 bg-amber-200 my mb-3 rounded-2xl overflow-hidden cursor-pointer hover:shadow-md hover:shadow-amber-200' : true,
               'shadow-md shadow-amber-200' : selectedOption && selectedOption.id === option.id
             }" 
             @click="handleSelectedOption(option)" 
             :data-index="index"
           >
-            <span class="p-4 bg-amber-200">{{ option.label }}</span>
+            <span class="p-4">{{ option.label }}</span>
             <span class="p-4 bg-gray-200 w-full">{{ option.text }}</span>
           </li>
         </ul>

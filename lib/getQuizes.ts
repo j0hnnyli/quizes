@@ -3,7 +3,6 @@ import typescriptQuiz from '../data/typescriptQuiz.json'
 import pythonQuiz from '../data/pythonQuiz.json'
 import type { Questions }  from './types/questionType'
 
-
 const getAllQuizes = (): {id: number, name: string, img: string, questions: Questions[] }[]  => {
   return [
     {
