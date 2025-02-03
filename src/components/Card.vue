@@ -14,7 +14,7 @@ const { title, id, img } = defineProps<Props>();
 <template>
   <RouterLink
     :to="`/quiz/${id}`"
-    class="bg-amber-200 rounded-xl overflow-hidden max-w-[350px] hover:shadow-lg hover:shadow-amber-200"
+    class="bg-amber-200 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-amber-200"
   >
     <div class="w-full h-[150px]">
       <img :src="img" :alt="title" class="w-full h-full" />
