@@ -84,7 +84,7 @@
 
     <Transition name="button">
       <button 
-        v-if="selectedOption !== null" 
+        v-if="selectedOption !== null"
         class="bg-amber-200 hover:bg-amber-400 cursor-pointer py-2 px-4 rounded-2xl ml-auto flex items-center mt-3"
         @click="handleNextQuestion"
       > 
