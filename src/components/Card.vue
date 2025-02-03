@@ -17,7 +17,7 @@ const { title, id, img } = defineProps<Props>();
     class="bg-amber-200 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-amber-200"
   >
     <div class="w-full h-[150px]">
-      <img :src="img" :alt="title" class="w-full h-full" />
+      <img :src="img" :alt="title" class="w-full h-full object-cover scale-105" />
     </div>
     <div class="p-2">
       <h2 class="text-2xl tracking-widest">{{ title }}</h2>
