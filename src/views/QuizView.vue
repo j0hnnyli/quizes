@@ -16,23 +16,26 @@
   
   const handleSelectedOption = (option: Option) => {
     selectedOption.value = option;
-  }
-  
-  const handleNextQuestion = () => {
-    if(selectedOption.value?.isCorrect){
+    
+    if(option.isCorrect){
       totalQuestionsRight.value++
     }
-    
+  }
+  
+  const handleNextQuestion = () => { 
     if(quiz.questions.length - 1 === currentQuestionIndex.value){
       showResults.value = true;
     }
 
-    currentQuestionIndex.value++
+    if(currentQuestionIndex.value < 9){
+      currentQuestionIndex.value++
+    }
+    
     currentQuestion.value = quiz.questions[currentQuestionIndex.value];
     selectedOption.value = null;
   }
   
-  const progress = computed(() => `${currentQuestionIndex.value/quiz.questions.length * 100}%`) 
+  const progress = computed(() => `${(currentQuestionIndex.value + 1)/quiz.questions.length * 100}%`) 
 </script> 
 
 
@@ -42,7 +45,7 @@
       <h2 class="text-5xl font-bold">{{ quiz.name }}</h2>
       
       <div>
-        <h2 class="text-xl font-bold">Question {{ currentQuestionIndex }} / {{ quiz.questions.length }}</h2>
+        <h2 class="text-xl font-bold">Question {{ currentQuestionIndex + 1 }} / {{ quiz.questions.length }}</h2>
         <div class="w-[200px] border-1 border-amber-200 h-10 rounded-2xl overflow-hidden">
           <div class="h-full bg-amber-200" :style="{width: progress}"></div>
         </div>
@@ -53,21 +56,24 @@
       <div v-if="!showResults" class="mt-5">
         <h2 class="text-xl md:text-2xl opacity-70">{{ currentQuestion.question }}</h2>
         
-        <ul class="mt-5">
-          <li 
-            v-for="(option, index) in currentQuestion.options" 
+        <div class="mt-5">
+          <button
+            v-for="option in currentQuestion.options" 
             :key="option.id"
             :class="{
-              'flex items-center w-full border border-amber-200 bg-amber-200 my mb-3 rounded-2xl overflow-hidden cursor-pointer hover:shadow-md hover:shadow-amber-200' : true,
-              'shadow-md shadow-amber-200' : selectedOption && selectedOption.id === option.id
+              'flex items-center w-full border border-amber-200 bg-amber-200 my mt-3 rounded-2xl overflow-hidden cursor-pointer' : true,
+              'hover:shadow-md hover:shadow-amber-200' : !selectedOption,
+              'shadow-md shadow-amber-200' : selectedOption && selectedOption.id === option.id,
+              'bg-green-500' : selectedOption && option.isCorrect,
+              'bg-red-500' : selectedOption && !option.isCorrect,
             }" 
+            :disabled="selectedOption !== null"
             @click="handleSelectedOption(option)" 
-            :data-index="index"
           >
             <span class="p-4">{{ option.label }}</span>
-            <span class="p-4 bg-gray-200 w-full">{{ option.text }}</span>
-          </li>
-        </ul>
+            <span class="p-4 bg-gray-200 w-full text-left">{{ option.text }}</span>
+          </button>
+        </div>
       </div>
       <Results
         v-else
@@ -79,7 +85,7 @@
     <Transition name="button">
       <button 
         v-if="selectedOption !== null" 
-        class="bg-amber-200 hover:bg-amber-400 cursor-pointer py-2 px-4 rounded-2xl ml-auto flex items-center"
+        class="bg-amber-200 hover:bg-amber-400 cursor-pointer py-2 px-4 rounded-2xl ml-auto flex items-center mt-3"
         @click="handleNextQuestion"
       > 
         <span class="mr-2">Next</span>
